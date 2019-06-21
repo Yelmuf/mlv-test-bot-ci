@@ -151,6 +151,7 @@ namespace Microsoft.BotBuilderSamples
                         Value = "https://peach.blender.org/",
                     },
                 },
+                Autostart = true
             };
 
             return videoCard;
