@@ -100,6 +100,9 @@ namespace Microsoft.BotBuilderSamples
                     // Display a VideoCard
                     reply.Attachments.Add(Cards.GetVideoCard().ToAttachment());
                     break;
+                case "Youtube Card":
+                    reply.Attachments.Add(Cards.GetYoutubeCard().ToAttachment());
+                    break;
                 default:
                     // Display a carousel of all the rich card types.
                     reply.AttachmentLayout = AttachmentLayoutTypes.Carousel;
@@ -111,6 +114,7 @@ namespace Microsoft.BotBuilderSamples
                     reply.Attachments.Add(Cards.GetSigninCard().ToAttachment());
                     reply.Attachments.Add(Cards.GetThumbnailCard().ToAttachment());
                     reply.Attachments.Add(Cards.GetVideoCard().ToAttachment());
+                    reply.Attachments.Add(Cards.GetYoutubeCard().ToAttachment());
                     break;
             }
 
@@ -135,6 +139,7 @@ namespace Microsoft.BotBuilderSamples
                 new Choice() { Value = "Signin Card", Synonyms = new List<string>() { "signin" } },
                 new Choice() { Value = "Thumbnail Card", Synonyms = new List<string>() { "thumbnail", "thumb" } },
                 new Choice() { Value = "Video Card", Synonyms = new List<string>() { "video" } },
+                new Choice() { Value = "Youtube Card", Synonyms = new List<string>() { "youtube", "yt" } },
                 new Choice() { Value = "All cards", Synonyms = new List<string>() { "all" } },
             };
 

@@ -156,6 +156,24 @@ namespace Microsoft.BotBuilderSamples
             return videoCard;
         }
 
+        public static VideoCard GetYoutubeCard()
+        {
+            var youtubeCard = new VideoCard
+            {
+                Media = new List<MediaUrl>
+                {
+                    new MediaUrl()
+                    {
+                        Url = "https://www.youtube.com/watch?v=YYV-OZIv8eg",
+                    },
+                },
+                Autostart = true,
+                Shareable = true,
+            };
+
+            return youtubeCard;
+        }
+
         public static AudioCard GetAudioCard()
         {
             var audioCard = new AudioCard
