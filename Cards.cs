@@ -211,5 +211,32 @@ namespace Microsoft.BotBuilderSamples
 
             return audioCard;
         }
+
+        public static AudioCard GetMp3Card()
+        {
+            var audioCard = new AudioCard
+            {
+                Title = "Sample mp3 file",
+                Text = "http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                Media = new List<MediaUrl>
+                {
+                    new MediaUrl()
+                    {
+                        Url = "http://jPlayer.org/audio/mp3/Miaow-07-Bubble.mp3",
+                    },
+                },
+                Buttons = new List<CardAction>
+                {
+                    new CardAction()
+                    {
+                        Title = "Read More",
+                        Type = ActionTypes.OpenUrl,
+                        Value = "https://en.wikipedia.org/wiki/The_Empire_Strikes_Back",
+                    },
+                },
+            };
+
+            return audioCard;
+        }
     }
 }

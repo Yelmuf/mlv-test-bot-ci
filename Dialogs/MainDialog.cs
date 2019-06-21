@@ -80,6 +80,10 @@ namespace Microsoft.BotBuilderSamples
                     // Display an AudioCard
                     reply.Attachments.Add(Cards.GetAudioCard().ToAttachment());
                     break;
+                case "Mp3 Card":
+                    // Display an AudioCard
+                    reply.Attachments.Add(Cards.GetMp3Card().ToAttachment());
+                    break;
                 case "Hero Card":
                     // Display a HeroCard.
                     reply.Attachments.Add(Cards.GetHeroCard().ToAttachment());
@@ -109,6 +113,7 @@ namespace Microsoft.BotBuilderSamples
                     reply.Attachments.Add(Cards.CreateAdaptiveCardAttachment());
                     reply.Attachments.Add(Cards.GetAnimationCard().ToAttachment());
                     reply.Attachments.Add(Cards.GetAudioCard().ToAttachment());
+                    reply.Attachments.Add(Cards.GetMp3Card().ToAttachment());
                     reply.Attachments.Add(Cards.GetHeroCard().ToAttachment());
                     reply.Attachments.Add(Cards.GetReceiptCard().ToAttachment());
                     reply.Attachments.Add(Cards.GetSigninCard().ToAttachment());
@@ -134,6 +139,7 @@ namespace Microsoft.BotBuilderSamples
                 new Choice() { Value = "Adaptive Card", Synonyms = new List<string>() { "adaptive" } },
                 new Choice() { Value = "Animation Card", Synonyms = new List<string>() { "animation" } },
                 new Choice() { Value = "Audio Card", Synonyms = new List<string>() { "audio" } },
+                new Choice() { Value = "Mp3 Card", Synonyms = new List<string>() { "mp3" } },
                 new Choice() { Value = "Hero Card", Synonyms = new List<string>() { "hero" } },
                 new Choice() { Value = "Receipt Card", Synonyms = new List<string>() { "receipt" } },
                 new Choice() { Value = "Signin Card", Synonyms = new List<string>() { "signin" } },
